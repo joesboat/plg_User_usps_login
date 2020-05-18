@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="user" method="upgrade">
+	<name>User - USPS</name>
+	<author>Joseph P. Gibson</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>(C) 2015 USPS and Joseph P. Gibson. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>joe@joesboat.org</authorEmail>
+	<authorUrl>www.joesboat.org</authorUrl>
+	<version>1.0.1</version>
+	<description>Setup for Authenticated USPS Members.</description>
+	<files>
+		<filename plugin="usps">usps.php</filename>
+		<filename>index.html</filename>
+		<filename>usps.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="autoregister"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="Auto register this uses."
+					label="Auto Register">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset 	name="controls" label="Controls">
+				<field 	name="debug" 
+               			type="list" 
+               			size="1"
+               			default="0" 
+               			label="Log actions." 
+               			description="When On record data for all logins."
+               	>
+					<option value="1">On</option>
+					<option	value="0">Off</option>
+            	</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
